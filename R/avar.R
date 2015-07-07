@@ -4,7 +4,7 @@
 # European Space Agency (ESA)
 ##
 # Centre for Automation and Robotics (CAR)
-# CSIC- Universidad Politécnica de Madrid
+# CSIC- Universidad Politecnica de Madrid
 #
 # Header: avar(param1, param2)
 #
@@ -30,6 +30,8 @@
 # which is convenient to estimate the amplitude of different noise components.
 #
 # License: GPL-2
+#
+#' @export
 #
 ################################################################################
 avar <- function (values, freq)

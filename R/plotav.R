@@ -4,7 +4,7 @@
 # European Space Agency (ESA)
 ##
 # Centre for Automation and Robotics (CAR)
-# CSIC- Universidad Politécnica de Madrid
+# CSIC- Universidad Politecnica de Madrid
 #
 # Header: plotAV(param)
 #
@@ -30,12 +30,16 @@
 #
 # License: GPL-2
 #
+#' @export
+#' @importFrom graphics plot lines axis grid title
+#' @importFrom gplots plotCI
+#
 ################################################################################
 plotav <- function (avdf)
 {
   #Load library
-  library(gplots)
-  
+  #library(gplots)
+
   #Plot Error Bars and Confidence Intervals
   plotCI(x= avdf$time, y=sqrt(avdf$av), uiw =  sqrt(avdf$av)*avdf$error, gap=0, lty = 1, xaxt="n", yaxt="n", col="blue", log="xy", lwd=1,  xlab="", ylab="")
   #Plot the line
@@ -47,6 +51,6 @@ plotav <- function (avdf)
   grid(equilogs=TRUE, lwd=1, col="orange")
   #Information (title and axis labels)
   title(main = "Allan variance Analysis", xlab = "Cluster Times (Sec)", ylab = "Allan Standard Deviation")
-  
+
   #legend(10, 5e-03, c("Allan Variance"),  fill = c("blue"))
 }

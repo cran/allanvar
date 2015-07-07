@@ -4,7 +4,7 @@
 # European Space Agency (ESA)
 ##
 # Centre for Automation and Robotics (CAR)
-# CSIC- Universidad Politécnica de Madrid
+# CSIC- Universidad Politecnica de Madrid
 #
 # Header: avarn(param1, param2)
 #
@@ -31,6 +31,7 @@
 #
 # License: GPL-2
 #
+#' @export
 #
 ################################################################################
 avarn <- function (values, freq)
